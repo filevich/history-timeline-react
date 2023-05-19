@@ -13,7 +13,7 @@ export const Interval: React.FC<Props> = ({
   title,
 }) => {
   return (
-    <div className="item">
+    <div className="item" title={`${from}..${to}`}>
       {title}
     </div>
   )
