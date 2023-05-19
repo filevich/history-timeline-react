@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Antiguedad",
+    "from": -3000,
+    "to": 476,
+    "subIntervals": [
+      {
+        "title": "Antigüedad clásica",
+        "from": -753,
+        "to": 476
+      }
+    ]
+  },
+  {
+    "title": "Edad Media",
+    "from": 476,
+    "to": 1492,
+    "subIntervals": [
+      {
+        "title": "Alta Edad Media",
+        "from": 476,
+        "to": 1000
+      },
+
+      {
+        "title": "Baja Edad Media",
+        "from": 1000,
+        "to": 1492,
+        "subIntervals": [
+          {
+            "title": "Plenitud de la Edad Media",
+            "from": 1000,
+            "to": 1200
+          },
+
+
+          {
+            "title": "crisis de la Edad Media",
+            "from": 1315,
+            "to": 1492
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Edad Moderna",
+    "from": 1492,
+    "to": 1789
+  },
+  {
+    "title": "Edad Contemporánea",
+    "from": 1789,
+    "to": 2019
+  }
+]

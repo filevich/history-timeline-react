@@ -1,0 +1,10 @@
+#time-line {
+	background: hsl(39, 30%, 85%);
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+#upper-timeline {
+  background: hsl(39, 30%, 85%);
+}
