@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-import { Timeline } from './components/Timeline'
+import { Timeline } from './components/Timeline/Timeline'
 // import cellarius from 'data/cellarius.json'
 
 interface Data {
@@ -11,6 +9,9 @@ interface Data {
   to: number
   subIntervals?: [any]
 }
+
+// unidad basica:
+// 1 año = 2 pixeles 
 
 function App() {
   // render props
