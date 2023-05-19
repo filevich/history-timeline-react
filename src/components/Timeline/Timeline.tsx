@@ -1,6 +1,6 @@
 import React from 'react';
-import './index.css'
-import { Interval } from '../Interval';
+import './Timeline.css'
+import { Interval } from '../Interval/Interval';
 import { centuries } from '../../centuries'
 
 interface Props {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './Interval.css'
 
 interface Props {
   from: number;
