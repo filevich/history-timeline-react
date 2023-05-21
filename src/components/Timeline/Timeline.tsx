@@ -1,30 +1,44 @@
 import React from 'react';
 import './Timeline.css'
 import { Interval } from '../Interval/Interval';
-import { Interval as TypeInterval } from '../../interval';
+// import { Interval as TypeInterval } from '../../interval';
+import { Lane } from '../../lane';
 import { yearsToPixels } from '../Control/Control';
 // import { centuries } from '../../centuries'
 
 interface Props {
   loc: number;
   zoom: number;
-  lanes: TypeInterval[][];
+  screenWidth: number;
+  lanes: Lane[];
+  visibility: { [key:string] : boolean };
 }
 
 export const Timeline: React.FC<Props> = ({
   loc, 
   zoom,
+  screenWidth,
   lanes,
+  visibility,
 }) => {
+
+  const visible = lanes
+    .filter(lane => visibility[lane.title])
+    .map(lane => lane.visible(loc, screenWidth, zoom))
+    .filter(v => v.length > 0)
 
   return (
     <>
-      {lanes.map((lane, ix) => 
+      {visible.map((intervals, ix) =>  
         <div
           key={ix}
           className="slider"
-          style={{marginLeft: yearsToPixels(lane[0].from - loc, zoom) + "px", width:"150%"}}>
-            {lane.map((c, ix) => 
+          style={{
+            marginLeft: yearsToPixels(intervals[0].from - loc, zoom) + "px",
+            width:"auto",
+            overflowX: "hidden"
+          }}>
+            {intervals.map((c, ix) => 
               <Interval
                 key={ix}
                 zoom={zoom}
