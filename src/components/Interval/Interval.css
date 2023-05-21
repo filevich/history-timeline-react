@@ -8,13 +8,18 @@
 }
 
 .slider > .item {
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   /* outline: 1px solid red; */
   height: auto;
   padding: 0 10px;
   background: #fcf0d9;
   background: rgba(255, 255, 255, 0.6);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .slider > .item:hover {

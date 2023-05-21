@@ -1,23 +1,28 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Timeline } from './components/Timeline/Timeline'
+import { Control, pixelsToYears } from './components/Control/Control'
+import { centuries } from './centuries'
 // import cellarius from 'data/cellarius.json'
 
 interface Data {
   title: string
   from: number
   to: number
-  subIntervals?: [any]
+  subIntervals?: any[]
 }
 
-// unidad basica:
-// 1 año = 2 pixeles 
-
 function App() {
+
+  // display props
+  const defaultLoc  = -3800
+      , defaultZoom = 1.5
+      , screenWidth = window.innerWidth
+
   // render props
-  const [loc, _setLoc] = useState(0) // location
-  const [zoom, setZoom] = useState(0) // zoom
-  
+  const [loc, setLoc] = useState(defaultLoc) // location
+  const [zoom, setZoom] = useState(defaultZoom) // zoom
+
   const [_data, setData] = useState<[Data]>()
 
   const fetchJson = async (file:string) => {
@@ -28,26 +33,26 @@ function App() {
     setData(data)
   }
 
+  window.scrollTo(0,0)
+
   useEffect(() => {
     // División clásica de Cellarius
     fetchJson('/data/cellarius.json')
   },[])
 
-  // wheel / zoom
-  useEffect(() => {
-    const handler = (e:WheelEvent) => {
-      // normalize
-      let d = -1 * e.deltaY / 120
-      setZoom(c => c + d)
-    }
-    document.body.addEventListener('wheel', handler)
-    return () => document.body.removeEventListener('wheel', handler)
-  }, [])
-
   return (
     <>
-      {<Timeline />}
-      {JSON.stringify({loc, zoom})}
+      <Timeline
+        loc={loc}
+        zoom={zoom}
+        lanes={[centuries.filter(c => 
+          c.isVisible(loc, pixelsToYears(screenWidth, zoom)))]} />
+      <Control
+        loc={loc}
+        screenWidth={screenWidth}
+        setLoc={setLoc}
+        zoom={zoom}
+        setZoom={setZoom} />
     </>
   )
 }

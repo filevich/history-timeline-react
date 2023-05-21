@@ -23,14 +23,15 @@ export const century = (num:number) => {
   return `s. ${toRoman(num)} ${postfix}`
 }
 
-let cs = [] 
+let cs:Interval[] = [] 
 
 for (let c = -38; c <= -2; c++) {
   cs.push(
     new Interval(
       c * 100,
       (c * 100) + 100,
-      century(c),
+      `${c * 100}`
+      // century(c),
     )
   )
 }
@@ -39,6 +40,7 @@ cs.push(
   new Interval(
     -100,
     0, // <- actually should be -1. but 100 - 0 = 100 years century vs 100 - (-1) = 99 years century :(
+    // `${-100}`
     century(-1),
   )
 )
@@ -47,6 +49,7 @@ cs.push(
   new Interval(
     0, // <- actually should be -1. but 100 - 0 = 100 years century vs 100 - (-1) = 99 years century :(
     100,
+    // `${0}`
     century(1),
   )
 )
@@ -56,6 +59,7 @@ for (let c = 2; c <= 21; c++) {
     new Interval(
       c * 100 - 100,
       c * 100,
+      // `${c * 100 - 100}`
       century(c),
     )
   )
