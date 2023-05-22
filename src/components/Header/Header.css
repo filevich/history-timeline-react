@@ -1,0 +1,16 @@
+#header {
+  background: black;
+  padding: 6pt;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .title {
+  color: white;
+  font-family: monospace;
+  font-size: 14pt;
+}

@@ -5,6 +5,7 @@ import { Control } from './components/Control/Control'
 import "./components/Panel/panel.css"
 import { Panel } from './components/Panel/Panel'
 import { Interval } from './interval'
+import { Header } from './components/Header/Header'
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Timeline
         loc={loc}
         zoom={zoom}
