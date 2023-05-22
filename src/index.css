@@ -30,7 +30,8 @@ body {
   min-width: 320px;
   min-height: 100vh; */
   overflow-y: hidden;
-  background: hsl(39, 30%, 85%);
+  /* background: hsl(39, 30%, 85%); */
+  background: white;
 }
 
 h1 {

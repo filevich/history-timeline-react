@@ -1,12 +1,12 @@
 {
   "id": "Cellarius",
-  "title": "División de Cellarius",
+  "title": "",
   "subintervals": [
     {
       "title": "Antiguedad",
       "from": -3000,
       "to": 476,
-      "subIntervals": [
+      "subintervals": [
         {
           "title": "Antigüedad clásica",
           "from": -753,
@@ -18,7 +18,7 @@
       "title": "Edad Media",
       "from": 476,
       "to": 1492,
-      "subIntervals": [
+      "subintervals": [
         {
           "title": "Alta Edad Media",
           "from": 476,
@@ -29,16 +29,14 @@
           "title": "Baja Edad Media",
           "from": 1000,
           "to": 1492,
-          "subIntervals": [
+          "subintervals": [
             {
               "title": "Plenitud de la Edad Media",
               "from": 1000,
               "to": 1200
             },
-
-
             {
-              "title": "crisis de la Edad Media",
+              "title": "Crisis de la Edad Media",
               "from": 1315,
               "to": 1492
             }

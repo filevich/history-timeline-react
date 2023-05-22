@@ -15,6 +15,8 @@ export class Interval {
     this.alt = alt
   }
 
+  span = () :number => (this.ending() - this.begining())
+
   begining = () :number => {
     if (this.from !== undefined)
       return this.from

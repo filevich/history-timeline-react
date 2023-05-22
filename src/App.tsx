@@ -47,7 +47,7 @@ function App() {
       fetchJson(file)
         .then(interval => {
           setData(c => [...c, interval])
-          setVisibility(c => ({ ...c, [interval.title]: true }))
+          setVisibility(c => ({ ...c, [interval.id]: true }))
         })
     })
   }, [setData, setVisibility])
