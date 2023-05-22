@@ -10,6 +10,8 @@
 
 [] toggle: use wheel to zoom 
 
+[] debug mode: toggle windows/body horizontal scroll
+
 
 ## bugs
 
