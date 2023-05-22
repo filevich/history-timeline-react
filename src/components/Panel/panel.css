@@ -1,19 +1,5 @@
-#panel {
-	background: rgba(0, 0, 0, 0.5);
+#toggler {
   position: fixed;
-  color: white;
   bottom: 0;
   right: 0;
-  border-radius: 5pt;
-  /* padding: 5pt 10pt; */
-  padding: 10pt;
-  margin: 5pt 10pt;
-  transition: all 1s;
-  cursor: default;
 }
-
-#panel:hover {
-	background: rgba(0, 0, 0, 0.8);
-  /* cursor: pointer; */
-}
-

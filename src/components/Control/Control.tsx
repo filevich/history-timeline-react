@@ -59,12 +59,13 @@ export const Control: React.FC<Props> = ({
 
   return (
     <>
-      <div id="control">
-        screenWidth: {screenWidth}px<hr/>
-        visible yrs: {_visibleYears} ~ [{fromYr}..{toYr}]<hr/>
-        1px = {pixelsToYears(1, zoom).toLocaleString("en-US", fmtZoom)} years<hr/>
-        loc: {loc}<hr/>
-        zoom: {z}
+      <div id="control" className="panel">
+        <div className="title">Control</div>
+        <span className="field">screenWidth:</span>{screenWidth}px<hr/>
+        <span className="field">visible yrs:</span> {_visibleYears} ~ [{fromYr}..{toYr}]<hr/>
+        <span className="field">scale:</span> 1px = {pixelsToYears(1, zoom).toLocaleString("en-US", fmtZoom)} years<hr/>
+        <span className="field">loc:</span> {loc}<hr/>
+        <span className="field">zoom:</span> {z}
         <button
           style={btnStyle}
           onClick={() => setZoom(c => c*.75)}>-</button>
