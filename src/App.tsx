@@ -2,16 +2,9 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Timeline } from './components/Timeline/Timeline'
 import { Control } from './components/Control/Control'
-import { centuries } from './centuries'
 import "./components/Panel/panel.css"
-// import cellarius from 'data/cellarius.json'
-
-interface Data {
-  title: string
-  from: number
-  to: number
-  subIntervals?: any[]
-}
+import { Panel } from './components/Panel/Panel'
+import { Interval } from './interval'
 
 function App() {
 
@@ -24,27 +17,39 @@ function App() {
   const [loc, setLoc] = useState(defaultLoc) // location
   const [zoom, setZoom] = useState(defaultZoom) // zoom
 
-  const [_data, setData] = useState<Data[]>([])
+  const [data, setData] = useState<Interval[]>([])
 
   const fetchJson = async (file:string) => {
     const res = await fetch(file)
     if (!res.ok)
       console.error(`An error has occured: ${res.status}`)
     const data = await res.json()
-    setData(c => [...c, ...data])
+    return data
+    // setData(c => [...c, data])
   }
 
   window.scrollTo(0,0)
 
-  useEffect(() => {
-    // División clásica de Cellarius
-    fetchJson('/data/cellarius.json')
-  },[])
+  const [visibility, setVisibility] = useState<{ [key:string]:boolean } >({})
 
-  const [visibility, setVisibility] = useState<{ [key:string]:boolean } >({
-    "Centuries!": true,
-    cellarius: true
-  })
+  useEffect(() => {
+    setData([])
+
+    const files = [
+      // División clásica de Cellarius
+      '/data/es/cellarius.json',
+      // centuries
+      '/data/es/centuries.json',
+    ]
+
+    files.forEach(file => {
+      fetchJson(file)
+        .then(interval => {
+          setData(c => [...c, interval])
+          setVisibility(c => ({ ...c, [interval.title]: true }))
+        })
+    })
+  }, [setData, setVisibility])
 
   return (
     <>
@@ -53,25 +58,16 @@ function App() {
         zoom={zoom}
         visibility={visibility}
         screenWidth={screenWidth}
-        lanes={[centuries]} />
+        lanes={data} />
       <Control
         loc={loc}
         screenWidth={screenWidth}
         setLoc={setLoc}
         zoom={zoom}
         setZoom={setZoom} />
-      <div id="panel">
-        {Object.keys(visibility).map((k, ix) => 
-          <div key={ix}>
-            <input
-              type="checkbox"
-              checked={visibility[k]}
-              onChange={() => setVisibility(c => ({...c, [k]: !c[k]}))}/>
-              {k}
-          </div>
-        )}
-        
-      </div>
+      <Panel
+        visibility={visibility}
+        setVisibility={setVisibility} />
     </>
   )
 }

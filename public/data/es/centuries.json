@@ -1,0 +1,301 @@
+{
+  "id": "Centuries",
+  "title": "Centuries",
+  "subintervals": [
+    {
+      "from": -3800,
+      "to": -3700,
+      "title": "s. XXXVIII BC"
+    },
+    {
+      "from": -3700,
+      "to": -3600,
+      "title": "s. XXXVII BC"
+    },
+    {
+      "from": -3600,
+      "to": -3500,
+      "title": "s. XXXVI BC"
+    },
+    {
+      "from": -3500,
+      "to": -3400,
+      "title": "s. XXXV BC"
+    },
+    {
+      "from": -3400,
+      "to": -3300,
+      "title": "s. XXXIV BC"
+    },
+    {
+      "from": -3300,
+      "to": -3200,
+      "title": "s. XXXIII BC"
+    },
+    {
+      "from": -3200,
+      "to": -3100,
+      "title": "s. XXXII BC"
+    },
+    {
+      "from": -3100,
+      "to": -3000,
+      "title": "s. XXXI BC"
+    },
+    {
+      "from": -3000,
+      "to": -2900,
+      "title": "s. XXX BC"
+    },
+    {
+      "from": -2900,
+      "to": -2800,
+      "title": "s. XXIX BC"
+    },
+    {
+      "from": -2800,
+      "to": -2700,
+      "title": "s. XXVIII BC"
+    },
+    {
+      "from": -2700,
+      "to": -2600,
+      "title": "s. XXVII BC"
+    },
+    {
+      "from": -2600,
+      "to": -2500,
+      "title": "s. XXVI BC"
+    },
+    {
+      "from": -2500,
+      "to": -2400,
+      "title": "s. XXV BC"
+    },
+    {
+      "from": -2400,
+      "to": -2300,
+      "title": "s. XXIV BC"
+    },
+    {
+      "from": -2300,
+      "to": -2200,
+      "title": "s. XXIII BC"
+    },
+    {
+      "from": -2200,
+      "to": -2100,
+      "title": "s. XXII BC"
+    },
+    {
+      "from": -2100,
+      "to": -2000,
+      "title": "s. XXI BC"
+    },
+    {
+      "from": -2000,
+      "to": -1900,
+      "title": "s. XX BC"
+    },
+    {
+      "from": -1900,
+      "to": -1800,
+      "title": "s. XIX BC"
+    },
+    {
+      "from": -1800,
+      "to": -1700,
+      "title": "s. XVIII BC"
+    },
+    {
+      "from": -1700,
+      "to": -1600,
+      "title": "s. XVII BC"
+    },
+    {
+      "from": -1600,
+      "to": -1500,
+      "title": "s. XVI BC"
+    },
+    {
+      "from": -1500,
+      "to": -1400,
+      "title": "s. XV BC"
+    },
+    {
+      "from": -1400,
+      "to": -1300,
+      "title": "s. XIV BC"
+    },
+    {
+      "from": -1300,
+      "to": -1200,
+      "title": "s. XIII BC"
+    },
+    {
+      "from": -1200,
+      "to": -1100,
+      "title": "s. XII BC"
+    },
+    {
+      "from": -1100,
+      "to": -1000,
+      "title": "s. XI BC"
+    },
+    {
+      "from": -1000,
+      "to": -900,
+      "title": "s. X BC"
+    },
+    {
+      "from": -900,
+      "to": -800,
+      "title": "s. IX BC"
+    },
+    {
+      "from": -800,
+      "to": -700,
+      "title": "s. VIII BC"
+    },
+    {
+      "from": -700,
+      "to": -600,
+      "title": "s. VII BC"
+    },
+    {
+      "from": -600,
+      "to": -500,
+      "title": "s. VI BC"
+    },
+    {
+      "from": -500,
+      "to": -400,
+      "title": "s. V BC"
+    },
+    {
+      "from": -400,
+      "to": -300,
+      "title": "s. IV BC"
+    },
+    {
+      "from": -300,
+      "to": -200,
+      "title": "s. III BC"
+    },
+    {
+      "from": -200,
+      "to": -100,
+      "title": "s. II BC"
+    },
+    {
+      "from": -100,
+      "to": 0,
+      "title": "s. I BC"
+    },
+    {
+      "from": 0,
+      "to": 100,
+      "title": "s. I AD"
+    },
+    {
+      "from": 100,
+      "to": 200,
+      "title": "s. II AD"
+    },
+    {
+      "from": 200,
+      "to": 300,
+      "title": "s. III AD"
+    },
+    {
+      "from": 300,
+      "to": 400,
+      "title": "s. IV AD"
+    },
+    {
+      "from": 400,
+      "to": 500,
+      "title": "s. V AD"
+    },
+    {
+      "from": 500,
+      "to": 600,
+      "title": "s. VI AD"
+    },
+    {
+      "from": 600,
+      "to": 700,
+      "title": "s. VII AD"
+    },
+    {
+      "from": 700,
+      "to": 800,
+      "title": "s. VIII AD"
+    },
+    {
+      "from": 800,
+      "to": 900,
+      "title": "s. IX AD"
+    },
+    {
+      "from": 900,
+      "to": 1000,
+      "title": "s. X AD"
+    },
+    {
+      "from": 1000,
+      "to": 1100,
+      "title": "s. XI AD"
+    },
+    {
+      "from": 1100,
+      "to": 1200,
+      "title": "s. XII AD"
+    },
+    {
+      "from": 1200,
+      "to": 1300,
+      "title": "s. XIII AD"
+    },
+    {
+      "from": 1300,
+      "to": 1400,
+      "title": "s. XIV AD"
+    },
+    {
+      "from": 1400,
+      "to": 1500,
+      "title": "s. XV AD"
+    },
+    {
+      "from": 1500,
+      "to": 1600,
+      "title": "s. XVI AD"
+    },
+    {
+      "from": 1600,
+      "to": 1700,
+      "title": "s. XVII AD"
+    },
+    {
+      "from": 1700,
+      "to": 1800,
+      "title": "s. XVIII AD"
+    },
+    {
+      "from": 1800,
+      "to": 1900,
+      "title": "s. XIX AD"
+    },
+    {
+      "from": 1900,
+      "to": 2000,
+      "title": "s. XX AD"
+    },
+    {
+      "from": 2000,
+      "to": 2100,
+      "title": "s. XXI AD"
+    }
+  ]
+}

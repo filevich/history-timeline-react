@@ -1,6 +1,4 @@
 import { Interval } from "./interval"
-import { Lane } from "./lane"
-
 // from https://www.w3resource.com/javascript-exercises/javascript-math-exercise-21.php
 const toRoman = (num:number) => {
   let digits = String(num).split('')
@@ -24,10 +22,11 @@ export const century = (num:number) => {
   return `s. ${toRoman(num)} ${postfix}`
 }
 
-let cs:Lane = new Lane("Centuries!") 
+let cs:Interval = new Interval()
+cs.subintervals = []
 
 for (let c = -38; c <= -2; c++) {
-  cs.intervals.push(
+  cs.subintervals.push(
     new Interval(
       c * 100,
       (c * 100) + 100,
@@ -37,7 +36,7 @@ for (let c = -38; c <= -2; c++) {
   )
 }
 
-cs.intervals.push(
+cs.subintervals.push(
   new Interval(
     -100,
     0, // <- actually should be -1. but 100 - 0 = 100 years century vs 100 - (-1) = 99 years century :(
@@ -46,7 +45,7 @@ cs.intervals.push(
   )
 )
 
-cs.intervals.push(
+cs.subintervals.push(
   new Interval(
     0, // <- actually should be -1. but 100 - 0 = 100 years century vs 100 - (-1) = 99 years century :(
     100,
@@ -56,7 +55,7 @@ cs.intervals.push(
 )
 
 for (let c = 2; c <= 21; c++) {
-  cs.intervals.push(
+  cs.subintervals.push(
     new Interval(
       c * 100 - 100,
       c * 100,

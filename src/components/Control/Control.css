@@ -10,6 +10,33 @@
   margin: 5pt 10pt;
   transition: all 1s;
   cursor: default;
+  padding-top: 15pt;
+}
+
+#control hr {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.438);
+  border: none;
+}
+
+#control::before {
+  content: "CTRL";
+  position: absolute;
+  font-weight: bold;
+  transform: translate(-50%, calc(-100% - 5pt));
+  left: 50%;
+  padding: 1pt 6pt;
+  border-radius: 5pt;
+  /* dark */
+  /* text-shadow: 0 1px 2px black; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* white */
+  background: white;
+  color: rgb(85, 85, 85);
+  /* paper */
+  /* background: #fff3e3; */
+  /* color: rgb(92, 52, 0); */
+  box-shadow: 0 2px 1px rgb(85, 85, 85);
 }
 
 #control:hover {

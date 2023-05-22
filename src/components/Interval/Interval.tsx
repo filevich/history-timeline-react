@@ -4,9 +4,9 @@ import { yearsToPixels } from '../Control/Control';
 
 interface Props {
   zoom: number;
-  from: number;
-  to: number;
-  title: string;
+  from?: number;
+  to?: number;
+  title?: string;
 }
 
 export const Interval: React.FC<Props> = ({ 
@@ -15,8 +15,11 @@ export const Interval: React.FC<Props> = ({
   to, 
   title,
 }) => {
-  const w = Math.round(yearsToPixels(to - from, zoom)) // <- usar eq
-  // const w = 200
+  
+  const w = (to && from)
+    ? Math.round(yearsToPixels(to - from, zoom))
+    : 200
+  
   return (
     <div
       className="item"
